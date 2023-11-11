@@ -74,7 +74,7 @@ ul {
 }
 .header .lists {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 20px;
@@ -84,6 +84,11 @@ ul {
     line-height: 40px;
     background-color: rgba(176, 176, 176, 0.6);
     border-radius: var(--border-radius);
+}
+@media (max-width: 991px) {
+    .header .lists {
+        display: flex;
+    }
 }
 .header .lists i {
     color: white;
@@ -789,3 +794,111 @@ ul {
     }
 }
 /* End Footer  */
+/* Start Global Side  */
+.content.side {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(var(--main-padding) - 30px);
+    width: 80%;
+    margin: 0 auto;
+}
+@media (max-width: 991px) {
+    .content.side {
+        flex-direction: column-reverse;
+    }
+}
+.content.side .info {
+    padding: 15px;
+}
+.content.side img {
+    max-width: 100%;
+    width: 100%;
+}
+.content.side h3 {
+    font-size: 28px;
+}
+.content.side p {
+    margin: 20px 0;
+    color: #777;
+}
+.content.side button {
+    padding: 10px 15px;
+    font-size: 22px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: black;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .content.side button {
+        width: 100%;
+        text-align: center;
+    }
+}
+.content.side button a {
+    color: white;
+}
+.content.side .boxs {
+    flex: 1;
+}
+.content.side .boxs .box {
+    background-color: white;
+}
+.content.side .boxs .box:not(:last-child) {
+    margin-bottom: calc(var(--main-padding) / 2);
+}
+.content.side .boxs .box ul {
+    margin: 10px 0 20px;
+}
+.content.side .boxs .box ul li {
+    padding: 10px 0;
+
+}
+.content.side .boxs .box ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+.content.side .boxs .box ul li a {
+    color: #d52349;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.content.side.boxs .box ul li a:hover {
+    text-decoration: none;
+}
+.content.side .box-full {
+    background-color: white;
+    flex: 2;
+}
+.content.side .box-full span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+/* End Global Side  */
+/* Start Left Sidepar  */
+.left-sidepar {
+    padding: var(--main-padding);
+    background-color: var(--bg);
+}
+/* End Left Sidepar  */
+/* Start Right Sidepar  */
+.right-sidepar {
+    padding: var(--main-padding);
+    background-color: var(--bg);
+}
+.right-sidepar .content {
+    flex-direction: row-reverse;
+}
+@media (max-width: 991px) {
+    .content.side {
+        flex-direction: column;
+    }
+}
+/* End Right Sidepar  */
+/* Start No Sidepar  */
+.no-sidepar {
+    padding: var(--main-padding);
+    background-color: var(--bg);
+}
