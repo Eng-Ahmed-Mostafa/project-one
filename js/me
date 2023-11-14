@@ -1,0 +1,47 @@
+// window.onload = function() {
+//     theChecker();
+// }
+let iconList = document.querySelector(".header .lists");
+let listLinks = document.querySelector(".header .links");
+iconList.addEventListener('click',() => {
+    iconList.classList.toggle("distance");
+    listLinks.classList.toggle("show");
+});
+let linkMenu = document.getElementById("amenu");
+let menu = document.querySelector(".header .links .menu");
+linkMenu.onclick = () => {
+    menu.classList.toggle("display");
+}
+let linkMenuMenu = document.querySelector(".header .links .inside > a");
+let menuMenu = document.querySelector(".header .links .menu .menu-menu");
+linkMenuMenu.onclick = () => {
+    menuMenu.classList.toggle("display");
+}
+// var linkActive = document.querySelectorAll(".header .links > li > a");
+
+
+
+// linkActive.forEach((element,index) => {
+//     element.classList.remove("active");
+//     element.onclick = function() {
+//         element.classList.add("active");
+//         contentStorage(index);
+//         console.log(element)
+//     }
+// });
+
+
+// function theChecker() {
+//     removeAndAddActive();
+// }
+// function removeAndAddActive(elements) {
+//     // Remove From All Items
+// }
+// function contentStorage(index) {
+//     let linkMoveIndex = window.localStorage.setItem("links-active",index);
+//     checkStorage(index);
+// }
+// function checkStorage(index) {
+//     linkActive[index].classList.add("active");
+// }
+// theChecker();
